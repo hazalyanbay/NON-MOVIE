@@ -1,0 +1,34 @@
+<p>
+<strong>Title:</strong>
+<%= @movie.title %>
+</p>
+<p>
+<strong>Description:</strong>
+<%= @movie.description %>
+</p>
+<p>
+<strong>Movie length:</strong>
+<%= @movie.movie_length %>
+</p>
+<p>
+<strong>Director:</strong>
+<%= @movie.director %>
+</p>
+<p>
+<strong>Rating:</strong>
+<%= @movie.rating %>
+</p>
+
+<aside>
+<% if @fans.present? %>
+    <h4>Fans</h4>
+    <ul>
+      <% @fans.each do |user| %>
+        <li>
+          <%= link_to user.name, user %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</aside>
+<%= link_to 'Back', movies_path %>

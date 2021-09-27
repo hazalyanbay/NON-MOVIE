@@ -1,0 +1,14 @@
+<% if @favorite_movies.present? %>
+  <h3>Favorite Movies</h3>
+  <div class="favorite-movies">
+    <% @favorite_movies.each do |movie| %>
+      <%= link_to image_tag(movie.image_file_name), movie %>
+    <% end %>
+  </div>
+<% end %>
+
+<% if current_user %>
+  <div class="faves">
+    <%= button_to "♥️ Fave", favorites_path(@movie) %>
+  </div>
+<% end %>
