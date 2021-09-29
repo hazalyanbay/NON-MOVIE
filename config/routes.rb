@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  #resources :users  
   resources :genres
   resources :favorites
   #devise_for :users
-  resources :users  
   resources :movies 
   devise_for :users, controllers: { sessions: 'users/sessions' }
 
