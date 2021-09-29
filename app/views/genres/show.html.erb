@@ -6,3 +6,8 @@
     <% end %>
   </ul>
 <% end %>
+<% if current_user %>
+  <div class="faves">
+    <%= button_to "♥️ Fave", favorites_path(@movie) %>
+  </div>
+<% end %>
